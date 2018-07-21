@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    // chat box
+    <color name="colorGray">#C4C4C4</color>
+    <color name="colorChatBoxBorder">#979797</color>
+    <color name="colorMainBackground">#DFDDDD</color>
 </resources>

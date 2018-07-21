@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.clevmania.keia.adapter.SymptomsAdapter;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private SymptomsAdapter symptomsAdapter;
     private ArrayList messageArrayList;
     private EditText inputMessage;
-    private ImageButton btnSend;
+    private ImageView btnSend;
     private ImageButton btnRecord;
     StreamPlayer streamPlayer;
     private boolean initialRequest;
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         inputMessage = findViewById(R.id.et_users_message);
-        btnSend = findViewById(R.id.fab);
+        btnSend = findViewById(R.id.iv_microphone);
 //        btnRecord= findViewById(R.id.btn_record);
         String customFont = "Montserrat-Regular.ttf";
         Typeface typeface = Typeface.createFromAsset(getAssets(), customFont);
