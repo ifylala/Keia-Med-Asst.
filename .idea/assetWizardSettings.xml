@@ -62,8 +62,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_microphone" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/microphone (2) (1).svg" />
+                            <entry key="outputName" value="ic_send" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/send-button (1).svg" />
                           </map>
                         </option>
                       </PersistentState>
