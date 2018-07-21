@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        inputMessage = findViewById(R.id.message);
+        inputMessage = findViewById(R.id.et_users_message);
         btnSend = findViewById(R.id.fab);
 //        btnRecord= findViewById(R.id.btn_record);
         String customFont = "Montserrat-Regular.ttf";
@@ -196,11 +196,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnRecord.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                recordMessage();
-            }
-        });
+//        btnRecord.setOnClickListener(new View.OnClickListener() {
+//            @Override public void onClick(View v) {
+//                recordMessage();
+//            }
+//        });
     }
 
     // Speech-to-Text Record Audio permission
@@ -467,7 +467,7 @@ public class MainActivity extends AppCompatActivity {
     private void enableMicButton() {
         runOnUiThread(new Runnable() {
             @Override public void run() {
-                btnRecord.setEnabled(true);
+//                btnRecord.setEnabled(true);
             }
         });
     }
