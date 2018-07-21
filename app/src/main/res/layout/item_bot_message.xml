@@ -3,10 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingLeft="16dp"
     android:paddingStart="16dp"
     android:paddingEnd="48dp"
-    android:paddingRight="48dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -23,7 +21,6 @@
         android:id="@+id/tv_bots_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:paddingBottom="4dp"
@@ -37,8 +34,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
-        android:layout_marginLeft="86dp"
-        android:layout_marginRight="64dp"
         android:layout_marginStart="86dp"
         android:layout_marginTop="16dp"
         android:padding="8dp"
