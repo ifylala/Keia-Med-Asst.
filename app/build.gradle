@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.clevmania.keia"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -30,6 +30,7 @@ dependencies {
     implementation 'com.ibm.watson.developer_cloud:conversation:4.2.1'
     implementation 'com.ibm.watson.developer_cloud:text-to-speech:4.2.1'
     implementation 'com.ibm.watson.developer_cloud:speech-to-text:4.2.1'
+    implementation 'com.ibm.watson.developer_cloud:android-sdk:0.4.3'
 
 
 }
