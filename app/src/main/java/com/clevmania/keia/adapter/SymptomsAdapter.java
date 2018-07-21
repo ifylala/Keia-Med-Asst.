@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.clevmania.keia.R;
-import com.clevmania.keia.adapter.model.ChatMessage;
+import com.clevmania.keia.model.ChatMessage;
 
 import java.util.ArrayList;
 

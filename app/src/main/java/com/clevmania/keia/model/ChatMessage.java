@@ -1,4 +1,4 @@
-package com.clevmania.keia.adapter.model;
+package com.clevmania.keia.model;
 
 import java.io.Serializable;
 
