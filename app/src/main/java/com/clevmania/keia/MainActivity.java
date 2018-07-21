@@ -124,7 +124,8 @@ public class MainActivity extends AppCompatActivity {
         inputMessage = findViewById(R.id.et_users_message);
         btnSend = findViewById(R.id.iv_microphone);
 //        btnRecord= findViewById(R.id.btn_record);
-        String customFont = "Montserrat-Regular.ttf";
+//        String customFont = "Montserrat-Regular.ttf";
+        String customFont = "Nunito-SemiBold.ttf";
         Typeface typeface = Typeface.createFromAsset(getAssets(), customFont);
         inputMessage.setTypeface(typeface);
         recyclerView = findViewById(R.id.rv_chat);
