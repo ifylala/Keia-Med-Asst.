@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Watson Conversation Service Credentials -->
+    <!--my symptom bot id f9ab291f-b39f-4003-b5fd-75f310ede58c-->
+    <string name="workspace_id">f9ab291f-b39f-4003-b5fd-75f310ede58c</string>
+    <string name="conversation_username">39dbd13f-6810-4b1e-848f-6ed50d86f774</string>
+    <string name="conversation_password">rjiyBAMmzZUy</string>
+
+    <!--Watson Speech-To-Text Service Credentials-->
+    <string name="STT_username">dfd7d820-4510-45c3-93cd-2e6b2632cb3e</string>
+    <string name="STT_password">rLfAdSjh4W4z</string>
+
+    <!--Watson Text-To-Speech Service Credentials-->
+    <string name="TTS_username">2af62bc7-c1c8-4953-b903-8462715ae5b3</string>
+    <string name="TTS_password">LtzXas38cT8Y</string>
+
+    <!--IBM Cloud Mobile Analytics-->
+    <string name="mobileanalytics_apikey">155ca8a0-708c-4eb2-8d85-cbc9a92d09b4</string>
+</resources>

@@ -2,14 +2,14 @@ package com.clevmania.keia.model;
 
 import java.io.Serializable;
 
-public class ChatMessage implements Serializable {
+public class ChatMessageModel implements Serializable {
     private String id;
     private String msg;
 
-    public ChatMessage() {
+    public ChatMessageModel() {
     }
 
-    public ChatMessage(String id, String msg) {
+    public ChatMessageModel(String id, String msg) {
         this.id = id;
         this.msg = msg;
     }

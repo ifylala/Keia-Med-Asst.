@@ -8,15 +8,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.clevmania.keia.R;
-import com.clevmania.keia.model.ChatMessage;
+import com.clevmania.keia.model.ChatMessageModel;
 
 import java.util.ArrayList;
 
 public class SymptomsAdapter extends RecyclerView.Adapter<SymptomsAdapter.ViewHolder> {
     private static final int SELF_MESSAGE = 100;
-    private ArrayList<ChatMessage> chatList;
+    private ArrayList<ChatMessageModel> chatList;
 
-    public SymptomsAdapter(ArrayList<ChatMessage> chatList) {
+    public SymptomsAdapter(ArrayList<ChatMessageModel> chatList) {
         this.chatList = chatList;
     }
 
@@ -39,7 +39,7 @@ public class SymptomsAdapter extends RecyclerView.Adapter<SymptomsAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ChatMessage message = chatList.get(position);
+        ChatMessageModel message = chatList.get(position);
         holder.messageView.setText(message.getMsg());
     }
 
@@ -50,7 +50,7 @@ public class SymptomsAdapter extends RecyclerView.Adapter<SymptomsAdapter.ViewHo
 
     @Override
     public int getItemViewType(int position) {
-        ChatMessage message = chatList.get(position);
+        ChatMessageModel message = chatList.get(position);
         if (message.getId()!=null && message.getId().equals("1")) {
             return SELF_MESSAGE;
         }
