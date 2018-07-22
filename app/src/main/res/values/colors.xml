@@ -8,4 +8,5 @@
     <color name="colorGray">#C4C4C4</color>
     <color name="colorChatBoxBorder">#979797</color>
     <color name="colorMainBackground">#DFDDDD</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>
