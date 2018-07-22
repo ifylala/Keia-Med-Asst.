@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.clevmania.keia.ui.IntroManager;
 import com.clevmania.keia.ui.OnBoardActivity;
+import com.clevmania.keia.ui.RegisterActivity;
 
 public class SplashActivity extends AppCompatActivity {
     private IntroManager introManager;
@@ -37,14 +38,24 @@ public class SplashActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }else{
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            },splash_timer);
+            if(FirebaseUtils.getAuthenticationReference().getCurrentUser() == null){
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(SplashActivity.this,RegisterActivity.class));
+                    }
+                }, splash_timer);
+            }else{
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                },splash_timer);
+            }
+
         }
     }
 }

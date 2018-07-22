@@ -76,8 +76,7 @@ public class OnBoardActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Todo intent should fire signin activity
-                Intent intent = new Intent(OnBoardActivity.this, MainActivity.class);
+                Intent intent = new Intent(OnBoardActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 finish();
             }

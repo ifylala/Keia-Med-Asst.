@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "414048752898",
+    "firebase_url": "https://keia-med-asst.firebaseio.com",
+    "project_id": "keia-med-asst",
+    "storage_bucket": "keia-med-asst.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414048752898:android:e54ecfc15f06bbce",
+        "android_client_info": {
+          "package_name": "com.clevmania.keia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414048752898-60l51bs5e2viiqc93s5ods1b1nh77pgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clevmania.keia",
+            "certificate_hash": "08340eb078ec4b273c0f9121112f9215c18909a0"
+          }
+        },
+        {
+          "client_id": "414048752898-0qn03tjs2pbbkvtju8t2m3ip96votvhl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1rQUf1w-lOhWla05kmYWHC4Rr2aFNK7w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414048752898-0qn03tjs2pbbkvtju8t2m3ip96votvhl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
