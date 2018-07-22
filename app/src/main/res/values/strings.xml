@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Keia</string>
+    <string name="analyser">Dr. Briggs</string>
+    <string name="logo_name">KEIA</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="user_name">username</string>
+    <string name="first_name">firstname</string>
+    <string name="pass_word">Password</string>
+    <string name="register">Register</string>
+    <string name="or">OR</string>
+    <string name="facebook">Login with facebook</string>
+    <string name="google">Login with gmail</string>
+    <string name="reg_screen">REGISTER</string>
 </resources>
