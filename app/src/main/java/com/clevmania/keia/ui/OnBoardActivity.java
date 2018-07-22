@@ -1,6 +1,7 @@
 package com.clevmania.keia.ui;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,9 @@ import android.widget.TextView;
 import com.clevmania.keia.MainActivity;
 import com.clevmania.keia.R;
 import com.clevmania.keia.adapter.SliderAdapter;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class OnBoardActivity extends AppCompatActivity {
     private ViewPager onBoardPager;
@@ -51,10 +55,7 @@ public class OnBoardActivity extends AppCompatActivity {
                 currentPage = position;
 
                 if(currentPage == 0){
-//                    next.setEnabled(true);
-//                    prev.setEnabled(false);
                     next.setVisibility(View.INVISIBLE);
-//
 
                 }else if(currentPage == navDots.length - 1 ){
                     next.setEnabled(true);
@@ -105,5 +106,29 @@ public class OnBoardActivity extends AppCompatActivity {
 
     private int getItem(int i){
         return onBoardPager.getCurrentItem() + i;
+    }
+
+    private void swipeViewPager(){
+        Timer timer;
+        final long DELAY_MS = 500;//delay in milliseconds before task is to be executed
+        final long PERIOD_MS = 3000;
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == navDots.length - 1) {
+                    currentPage = 0;
+                }
+                onBoardPager.setCurrentItem(currentPage++, true);
+            }
+        };
+
+        timer = new Timer(); // This will create a new Thread
+        timer .schedule(new TimerTask() { // task to be scheduled
+
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, DELAY_MS, PERIOD_MS);
     }
 }
