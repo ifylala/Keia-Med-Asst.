@@ -1,6 +1,7 @@
 package com.clevmania.keia.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
@@ -11,12 +12,14 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.clevmania.keia.MainActivity;
 import com.clevmania.keia.R;
+import com.clevmania.keia.ui.OnBoardActivity;
 
 public class SliderAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater inflater;
-    private ImageView slideLayout;
+    private ImageView slideLayout, nextView;
     private TextView header;
     private TextView body;
 
@@ -57,6 +60,7 @@ public class SliderAdapter extends PagerAdapter {
         slideLayout = view.findViewById(R.id.iv_slide_bg);
         header = view.findViewById(R.id.tv_slide_header);
         body = view.findViewById(R.id.tv_slide_body);
+        nextView = view.findViewById(R.id.iv_next_slide_bg);
 
         slideLayout.setBackgroundResource(sliderBackground[position]);
         Typeface headFace = Typeface.createFromAsset(context.getAssets(),"Nunito-SemiBold.ttf");
@@ -74,6 +78,5 @@ public class SliderAdapter extends PagerAdapter {
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((FrameLayout)object);
-        super.destroyItem(container, position, object);
     }
 }

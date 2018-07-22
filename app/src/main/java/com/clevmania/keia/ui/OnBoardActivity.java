@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,7 +20,7 @@ public class OnBoardActivity extends AppCompatActivity {
     private LinearLayout navLayout;
     private SliderAdapter sliderAdapter;
     private TextView navDots[];
-    private Button next,prev;
+    private Button next;
     private int currentPage;
     private ViewPager.OnPageChangeListener slidePageListener;
 
@@ -33,7 +34,6 @@ public class OnBoardActivity extends AppCompatActivity {
         sliderAdapter = new SliderAdapter(this);
 
         next = findViewById(R.id.btn_next);
-        prev = findViewById(R.id.btn_skip);
 
         onBoardPager.setAdapter(sliderAdapter);
         displayDots(0);
@@ -51,27 +51,16 @@ public class OnBoardActivity extends AppCompatActivity {
                 currentPage = position;
 
                 if(currentPage == 0){
-                    next.setEnabled(true);
-                    prev.setEnabled(false);
-                    prev.setVisibility(View.INVISIBLE);
-
-                    next.setText("Next");
-                    prev.setText("");
+//                    next.setEnabled(true);
+//                    prev.setEnabled(false);
+                    next.setVisibility(View.INVISIBLE);
+//
 
                 }else if(currentPage == navDots.length - 1 ){
                     next.setEnabled(true);
-                    prev.setEnabled(true);
-                    prev.setVisibility(View.VISIBLE);
-
-                    next.setText("Continue");
-                    prev.setText("Previous");
+                    next.setVisibility(View.VISIBLE);
                 }else {
-                    next.setEnabled(true);
-                    prev.setEnabled(true);
-                    prev.setVisibility(View.VISIBLE);
-
-                    next.setText("Next");
-                    prev.setText("Previous");
+                    next.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -86,27 +75,13 @@ public class OnBoardActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int currentItem = getItem(+1);
-                if(currentItem < navDots.length){
-                    onBoardPager.setCurrentItem(currentItem);
-                }else {
-                    // Todo intent should fire signin activity
-                    Intent intent = new Intent(OnBoardActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
+                // Todo intent should fire signin activity
+                Intent intent = new Intent(OnBoardActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
-        prev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int currentItem = getItem(-1);
-                if(currentItem < navDots.length){
-                    onBoardPager.setCurrentItem(currentItem);
-                }
-            }
-        });
     }
 
     private void displayDots(int position){
@@ -123,7 +98,7 @@ public class OnBoardActivity extends AppCompatActivity {
         }
 
         if(navDots.length > 0){
-            navDots[position].setTextColor(getResources().getColor(R.color.colorAccent));
+            navDots[position].setTextColor(getResources().getColor(R.color.colorWhite));
         }
 
     }
